@@ -5,7 +5,7 @@ package org.jay.kotlindemo
  */
 
 
-class Kotlin2 {
+class Kotlin2基本类型 {
     //基本类型
 
 
@@ -54,7 +54,7 @@ class Kotlin2 {
         //较小的类型不能隐式转换为较大的类型。
         //这意味着在不进行显式转换的情况下我们不能把 Byte 型值赋给一个 Int 变量。
         val b: Byte = 1 // OK, 字面值是静态检测的
-        val i: Int = b // 错误 Type mismatch.Required:IntFound:Byte
+        //val i: Int = b // 错误 Type mismatch.Required:IntFound:Byte
         //我们可以显式转换来拓宽数字
         val i2: Int = b.toInt() // OK: 显式拓宽
 
@@ -91,7 +91,7 @@ class Kotlin2 {
         //Char
         //字符用 Char 类型表示。它们不能直接当作数字
         fun check(c: Char) {
-            if (c == 1) { // 错误：类型不兼容  Operator '==' cannot be applied to 'Char' and 'Int
+            if (c.toInt() == 1) { // 错误：类型不兼容  Operator '==' cannot be applied to 'Char' and 'Int
                 // ……
             }
         }
@@ -154,7 +154,7 @@ class Kotlin2 {
         //字符串可以包含模板表达式 ，即一些小段代码，会求值并把结果合并到字符串中。
         //模板表达式以美元符（$）开头，由一个简单的名字构成:
         val i3 = 10
-        val s1 = "i = $i" // 求值结果为 "i = 10"
+        val s1 = "i3 = $i3" // 求值结果为 "i = 10"
         //或者用花括号括起来的任意表达式:
         val s2 = "abc"
         val str = "$s.length is ${s.length}" // 求值结果为 "abc.length is 3"

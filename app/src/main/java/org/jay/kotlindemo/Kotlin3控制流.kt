@@ -3,7 +3,7 @@ package org.jay.kotlindemo
 /**
  * Created by jay on 2017/9/12.
  */
-class Kotlin3 {
+class Kotlin3控制流 {
     //控制流：if、when、for、while
     fun main(args: Array<String>) {
 
